@@ -98,14 +98,22 @@ contactInfo = graduates.map(function(grad){
 console.table(contactInfo);
 
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
+/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array 
+called uni that contains them all. Log the result. */
+let uni = [];
+
+uni = graduates.filter(function(grad){
+  if(grad.university.includes("Uni") || grad.university.includes("uni")){
+    return true;
+  }
+})
+console.table(uni);
 
 
 // ==== ADVANCED Array Methods ====
 
-// Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
+// Given this zoo data from around the United States, follow the instructions below. 
+// Use the specific array methods in the requests below to solve the problems.
 
 
 zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
